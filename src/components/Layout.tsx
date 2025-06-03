@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Sun, Moon } from "lucide-react";
+import { Menu, X, Sun, Moon, Github, Linkedin, Mail, MapPin } from "lucide-react";
 import { useTheme } from "./ThemeProvider";
 
 interface LayoutProps {
@@ -134,11 +134,79 @@ const Layout = ({ children }: LayoutProps) => {
       </main>
 
       {/* Footer */}
-      <footer className="bg-muted/50 mt-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-          <div className="text-center text-muted-foreground">
-            <p>&copy; 2024 Pawan Raj Pandey. All rights reserved.</p>
-            <p className="mt-2">Built with React, TypeScript, and Tailwind CSS</p>
+      <footer className="bg-muted/30 border-t mt-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* Brand Section */}
+            <div className="space-y-4">
+              <h3 className="text-lg font-bold">Pawan Raj Pandey</h3>
+              <p className="text-muted-foreground text-sm leading-relaxed">
+                Aspiring Django backend developer passionate about building scalable systems and real-time applications.
+              </p>
+            </div>
+
+            {/* Quick Links */}
+            <div className="space-y-4">
+              <h4 className="text-sm font-semibold uppercase tracking-wider">Quick Links</h4>
+              <div className="grid grid-cols-2 gap-2">
+                {navigation.map((item) => (
+                  <Link
+                    key={item.name}
+                    to={item.href}
+                    className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                  >
+                    {item.name}
+                  </Link>
+                ))}
+              </div>
+            </div>
+
+            {/* Contact & Social */}
+            <div className="space-y-4">
+              <h4 className="text-sm font-semibold uppercase tracking-wider">Connect</h4>
+              <div className="space-y-3">
+                <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                  <MapPin className="h-4 w-4" />
+                  <span>Kathmandu, Nepal</span>
+                </div>
+                <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                  <Mail className="h-4 w-4" />
+                  <a href="mailto:pawanpandey1251@gmail.com" className="hover:text-primary transition-colors">
+                    pawanpandey1251@gmail.com
+                  </a>
+                </div>
+                <div className="flex items-center gap-4 pt-2">
+                  <a
+                    href="https://github.com/ozzypawan"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-muted-foreground hover:text-primary transition-colors"
+                  >
+                    <Github className="h-5 w-5" />
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/in/pawanrajpandey/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-muted-foreground hover:text-primary transition-colors"
+                  >
+                    <Linkedin className="h-5 w-5" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Bottom Section */}
+          <div className="border-t border-border mt-8 pt-6">
+            <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
+              <p className="text-sm text-muted-foreground">
+                &copy; {new Date().getFullYear()} Pawan Raj Pandey. All rights reserved.
+              </p>
+              <p className="text-sm text-muted-foreground">
+                Available for backend development opportunities
+              </p>
+            </div>
           </div>
         </div>
       </footer>
