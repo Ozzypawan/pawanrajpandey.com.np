@@ -1,7 +1,7 @@
-
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { MapPin, Calendar, Building } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 
 const Experience = () => {
   const experiences = [
@@ -69,29 +69,31 @@ const Experience = () => {
   };
 
   return (
-    <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-      {/* Header */}
-      <div className="text-center mb-16 animate-fade-in">
-        <h1 className="text-4xl sm:text-5xl font-bold mb-6">Professional Experience</h1>
-        <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-          My journey in backend development and the impact I've made
-        </p>
-      </div>
+    <>
+      <Helmet>
+        <title>Experience - Pawan Raj Pandey | Django Backend Developer</title>
+        <meta name="description" content="Professional experience of Pawan Raj Pandey as Django Backend Developer at Ayata Incorporation. 1 year of industry experience in scalable backend systems, REST APIs, and microservices." />
+        <meta name="keywords" content="Django experience, backend developer experience, Ayata Incorporation, REST API development, microservices, PostgreSQL, RabbitMQ" />
+        <meta property="og:title" content="Experience - Pawan Raj Pandey | Django Backend Developer" />
+        <meta property="og:description" content="Professional experience of Pawan Raj Pandey as Django Backend Developer at Ayata Incorporation." />
+        <link rel="canonical" href="https://pawanrajpandey.com/experience" />
+      </Helmet>
 
-      {/* Timeline */}
-      <div className="relative">
-        {/* Timeline line */}
-        <div className="absolute left-8 top-0 bottom-0 w-px bg-border hidden md:block"></div>
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        {/* Header */}
+        <div className="text-center mb-16 animate-fade-in">
+          <h1 className="text-4xl sm:text-5xl font-bold mb-6">Professional Experience</h1>
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            My journey in backend development and the impact I've made
+          </p>
+        </div>
 
         {/* Work Experience */}
         <section className="mb-16">
           <h2 className="text-3xl font-semibold mb-8">Work Experience</h2>
           
           {experiences.map((exp, index) => (
-            <div key={index} className="relative mb-12 md:ml-16">
-              {/* Timeline dot */}
-              <div className="absolute -left-20 top-6 w-4 h-4 bg-primary rounded-full border-4 border-background hidden md:block"></div>
-              
+            <div key={index} className="mb-12">
               <Card className="p-8 hover:shadow-lg transition-all duration-300">
                 {/* Header */}
                 <div className="mb-6">
@@ -173,38 +175,33 @@ const Experience = () => {
         <section>
           <h2 className="text-3xl font-semibold mb-8">Education</h2>
           
-          <div className="relative md:ml-16">
-            {/* Timeline dot */}
-            <div className="absolute -left-20 top-6 w-4 h-4 bg-secondary rounded-full border-4 border-background hidden md:block"></div>
-            
-            <Card className="p-8">
-              <div className="mb-4">
-                <h3 className="text-xl font-semibold text-primary mb-2">
-                  {education.degree}
-                </h3>
-                <div className="space-y-2 text-muted-foreground">
-                  <div className="flex items-center space-x-2">
-                    <Building className="h-4 w-4" />
-                    <span className="font-medium">{education.institution}</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <MapPin className="h-4 w-4" />
-                    <span>{education.location}</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <Calendar className="h-4 w-4" />
-                    <span>{education.period}</span>
-                  </div>
+          <Card className="p-8">
+            <div className="mb-4">
+              <h3 className="text-xl font-semibold text-primary mb-2">
+                {education.degree}
+              </h3>
+              <div className="space-y-2 text-muted-foreground">
+                <div className="flex items-center space-x-2">
+                  <Building className="h-4 w-4" />
+                  <span className="font-medium">{education.institution}</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <MapPin className="h-4 w-4" />
+                  <span>{education.location}</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <Calendar className="h-4 w-4" />
+                  <span>{education.period}</span>
                 </div>
               </div>
-              <p className="text-muted-foreground leading-relaxed">
-                {education.description}
-              </p>
-            </Card>
-          </div>
+            </div>
+            <p className="text-muted-foreground leading-relaxed">
+              {education.description}
+            </p>
+          </Card>
         </section>
       </div>
-    </div>
+    </>
   );
 };
 

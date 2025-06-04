@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Sun, Moon, Github, Linkedin, Mail, MapPin } from "lucide-react";
+import { Menu, X, Sun, Moon, Github, Linkedin, Mail, MapPin, Briefcase } from "lucide-react";
 import { useTheme } from "./ThemeProvider";
 
 interface LayoutProps {
@@ -181,6 +181,7 @@ const Layout = ({ children }: LayoutProps) => {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-muted-foreground hover:text-primary transition-colors"
+                    aria-label="GitHub Profile"
                   >
                     <Github className="h-5 w-5" />
                   </a>
@@ -189,8 +190,18 @@ const Layout = ({ children }: LayoutProps) => {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-muted-foreground hover:text-primary transition-colors"
+                    aria-label="LinkedIn Profile"
                   >
                     <Linkedin className="h-5 w-5" />
+                  </a>
+                  <a
+                    href="https://www.upwork.com/freelancers/~01175d706b5dbfe5f4"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-muted-foreground hover:text-primary transition-colors"
+                    aria-label="Upwork Profile"
+                  >
+                    <Briefcase className="h-5 w-5" />
                   </a>
                 </div>
               </div>
