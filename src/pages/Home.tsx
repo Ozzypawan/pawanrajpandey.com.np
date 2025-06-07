@@ -24,7 +24,7 @@ Contact:
 💻 GitHub: https://github.com/ozzypawan
 
 SUMMARY
-Aspiring Django backend developer with 1 year of industry experience contributing to scalable backend systems and real-time features. Familiar with microservices architecture and message queue systems like RabbitMQ & gRPC. Proficient in Django, REST APIs, and PostgreSQL.
+Backend developer with 1 year of industry experience contributing to scalable backend systems and real-time features. Familiar with microservices architecture and message queue systems like RabbitMQ & gRPC. Proficient in Django, REST APIs, and PostgreSQL.
 
 EXPERIENCE
 Junior Backend Developer - Ayata Incorporation (July 2024 – April 2025)
@@ -82,7 +82,7 @@ BSc.CSIT - St. Lawrence College (2020 – 2024)
               Pawan Raj Pandey
             </h1>
             <h2 className="text-xl sm:text-2xl text-muted-foreground font-medium">
-              Aspiring Django Backend Developer
+              Backend Developer
             </h2>
           </div>
 
@@ -150,12 +150,12 @@ BSc.CSIT - St. Lawrence College (2020 – 2024)
                 </div>
                 <div className="flex gap-4 pt-2">
                   <Button variant="outline" size="sm" asChild>
-                    <a href="https://ignite-attendance.vercel.app/" target="_blank" rel="noopener noreferrer">
+                    <a href="https://ams.ayata.com.np/" target="_blank" rel="noopener noreferrer">
                       Live Demo
                     </a>
                   </Button>
                   <Button variant="outline" size="sm" asChild>
-                    <a href="https://github.com/ozzypawan/ams" target="_blank" rel="noopener noreferrer">
+                    <a href="https://github.com/Ozzypawan/AMS" target="_blank" rel="noopener noreferrer">
                       GitHub
                     </a>
                   </Button>

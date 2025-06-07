@@ -1,4 +1,3 @@
-
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -23,8 +22,8 @@ const Projects = () => {
         "Comprehensive reporting and analytics",
         "Hardware integration for multiple attendance devices"
       ],
-      liveUrl: "https://ignite-attendance.vercel.app/",
-      githubUrl: "https://github.com/ozzypawan/ams",
+      liveUrl: "https://ams.ayata.com.np/",
+      githubUrl: "https://github.com/Ozzypawan/AMS",
       category: "Enterprise Software",
       status: "Production"
     },
@@ -67,8 +66,8 @@ const Projects = () => {
         "API versioning and backward compatibility",
         "Comprehensive error handling and logging"
       ],
-      liveUrl: "https://api-framework-demo.vercel.app/",
-      githubUrl: "https://github.com/ozzypawan/django-api-framework",
+      liveUrl: "https://ignitenepal.com/",
+      githubUrl: "https://ignitenepal.com/",
       category: "Framework",
       status: "Completed"
     },
@@ -89,8 +88,8 @@ const Projects = () => {
         "Responsive design for mobile devices",
         "Emoji support and file sharing"
       ],
-      liveUrl: "https://realtime-chat-django.vercel.app/",
-      githubUrl: "https://github.com/ozzypawan/realtime-chat",
+      liveUrl: "https://github.com/Ozzypawan/Spicenet",
+      githubUrl: "https://github.com/Ozzypawan/Spicenet",
       category: "Web Application",
       status: "Completed"
     }
