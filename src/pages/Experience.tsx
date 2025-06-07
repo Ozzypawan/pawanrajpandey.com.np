@@ -1,3 +1,4 @@
+
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { MapPin, Calendar, Building } from "lucide-react";
@@ -6,56 +7,77 @@ import { Helmet } from "react-helmet-async";
 const Experience = () => {
   const experiences = [
     {
-      title: "Junior Backend Developer",
-      company: "Ayata Incorporation",
-      location: "Anamnagar, Kathmandu",
-      period: "July 2024 – April 2025",
+      title: "Backend Developer",
+      company: "Zeta Labs",
+      location: "Kuleshwor, Kathmandu",
+      period: "June 2025 – Present",
       type: "Full-time",
-      description: "Leading backend development for the Attendance Management System (AMS) and other enterprise solutions.",
+      description: "Working on microservices architecture and scalable backend solutions.",
       responsibilities: [
-        "Developed core backend features for the Attendance Management System including attendance tracking, shift scheduling, and payroll integration",
-        "Built robust RESTful APIs using Django and Django REST Framework",
-        "Integrated RabbitMQ for handling asynchronous tasks and improving system performance",
-        "Transitioned parts of the monolithic system to microservices architecture using gRPC",
-        "Implemented Role-Based Access Control (RBAC) for secure user management",
-        "Built real-time features using Django Channels and Redis for live updates",
-        "Designed and optimized PostgreSQL database schemas for improved performance",
-        "Successfully integrated biometric and RFID attendance hardware systems",
-        "Collaborated with cross-functional teams including frontend, UI/UX, and QA in Agile sprints"
+        "Developing microservices using Django and gRPC for distributed system architecture",
+        "Handling asynchronous tasks with RabbitMQ for improved system performance",
+        "Designing optimized PostgreSQL databases for efficient data management",
+        "Collaborating in cross-functional teams to deliver enterprise systems",
+        "Implementing secure authentication and Role-Based Access Control (RBAC)",
+        "Building containerized applications using Docker for seamless deployment",
+        "Developing and maintaining RESTful APIs for various client applications"
       ],
       technologies: [
-        "Django", "Django REST Framework", "Python", "PostgreSQL", 
-        "RabbitMQ", "gRPC", "Django Channels", "Redis", "Git", "ClickUp"
+        "Django", "gRPC", "RabbitMQ", "PostgreSQL", "Docker", "Git", "REST APIs"
       ],
       achievements: [
-        "Improved system performance by 40% through microservices implementation",
-        "Successfully delivered real-time attendance tracking features",
-        "Reduced API response time by implementing efficient database queries"
+        "Successfully implemented microservices architecture for scalable solutions",
+        "Optimized database performance through efficient schema design",
+        "Enhanced system security with robust authentication mechanisms"
       ]
     },
     {
-      title: "Intern Backend Developer", 
+      title: "Junior Backend Developer",
+      company: "Ayata Incorporation",
+      location: "Anamnagar, Kathmandu",
+      period: "July 2024 – May 2025",
+      type: "Full-time",
+      description: "Led backend development of the Attendance Management System (AMS) and other enterprise projects.",
+      responsibilities: [
+        "Built robust RESTful APIs using Django and Django REST Framework",
+        "Integrated RabbitMQ and Redis for asynchronous tasks and real-time features",
+        "Transitioned monolithic system parts to microservices architecture",
+        "Managed role-based permissions and comprehensive user access control",
+        "Designed and optimized database schemas for improved performance",
+        "Implemented real-time features using Django Channels for live updates",
+        "Collaborated with frontend, UI/UX, and QA teams in Agile development cycles"
+      ],
+      technologies: [
+        "Django", "Django REST Framework", "RabbitMQ", "Redis", "gRPC", "PostgreSQL", "Git", "ClickUp"
+      ],
+      achievements: [
+        "Successfully delivered the complete Attendance Management System",
+        "Improved system performance by 40% through microservices implementation",
+        "Reduced API response time through efficient database optimization"
+      ]
+    },
+    {
+      title: "Backend Developer Intern",
       company: "Ayata Incorporation",
       location: "Anamnagar, Kathmandu",
       period: "April 2024 – July 2024",
       type: "Internship",
-      description: "Started my professional journey learning Django fundamentals and contributing to backend development projects.",
+      description: "Kickstarted backend development journey and contributed to live projects.",
       responsibilities: [
-        "Learned Django and Django REST Framework fundamentals for web application development",
-        "Designed and managed PostgreSQL databases with proper schema design",
-        "Gained hands-on experience with Agile development methodologies and ClickUp project management",
-        "Participated in code reviews and debugging sessions to improve code quality",
-        "Studied RESTful API design principles and best practices",
-        "Assisted senior developers in backend feature development and testing"
+        "Learned Django, Django REST Framework, and REST API principles",
+        "Designed and managed PostgreSQL database schemas with proper normalization",
+        "Participated in team sprints and collaborative code review sessions",
+        "Assisted in backend development tasks and feature implementation",
+        "Gained hands-on experience with Agile development methodologies",
+        "Contributed to production code within the first month of internship"
       ],
       technologies: [
-        "Django", "Django REST Framework", "Python", "PostgreSQL", 
-        "Git", "ClickUp", "REST APIs"
+        "Django", "Django REST Framework", "PostgreSQL", "Git", "REST APIs", "ClickUp"
       ],
       achievements: [
-        "Successfully completed all assigned learning milestones",
-        "Contributed to production code within first month",
-        "Received positive feedback for quick learning and adaptation"
+        "Successfully completed all assigned learning milestones ahead of schedule",
+        "Contributed meaningfully to production codebase as an intern",
+        "Received positive feedback for quick learning and professional adaptation"
       ]
     }
   ];
@@ -72,10 +94,10 @@ const Experience = () => {
     <>
       <Helmet>
         <title>Experience - Pawan Raj Pandey | Django Backend Developer</title>
-        <meta name="description" content="Professional experience of Pawan Raj Pandey as Django Backend Developer at Ayata Incorporation. 1 year of industry experience in scalable backend systems, REST APIs, and microservices." />
-        <meta name="keywords" content="Django experience, backend developer experience, Ayata Incorporation, REST API development, microservices, PostgreSQL, RabbitMQ" />
+        <meta name="description" content="Professional experience of Pawan Raj Pandey as Django Backend Developer at Zeta Labs and Ayata Incorporation. 1+ years of industry experience in scalable backend systems, microservices, and REST APIs." />
+        <meta name="keywords" content="Django experience, backend developer experience, Zeta Labs, Ayata Incorporation, microservices, gRPC, PostgreSQL, RabbitMQ" />
         <meta property="og:title" content="Experience - Pawan Raj Pandey | Django Backend Developer" />
-        <meta property="og:description" content="Professional experience of Pawan Raj Pandey as Django Backend Developer at Ayata Incorporation." />
+        <meta property="og:description" content="Professional experience of Pawan Raj Pandey as Django Backend Developer with expertise in microservices and scalable systems." />
         <link rel="canonical" href="https://pawanrajpandey.com/experience" />
       </Helmet>
 
@@ -84,7 +106,7 @@ const Experience = () => {
         <div className="text-center mb-16 animate-fade-in">
           <h1 className="text-4xl sm:text-5xl font-bold mb-6">Professional Experience</h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            My journey in backend development and the impact I've made
+            Backend developer with hands-on experience building scalable systems, microservices, and real-time applications
           </p>
         </div>
 
