@@ -1,3 +1,4 @@
+
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -50,26 +51,27 @@ const Projects = () => {
       status: "In Development"
     },
     {
-      title: "RESTful API Framework",
-      description: "A robust Django REST Framework implementation showcasing best practices for API development, including authentication, rate limiting, comprehensive documentation, and automated testing suites.",
-      longDescription: "This project serves as a comprehensive template for building production-ready REST APIs with Django. It implements industry best practices for security, performance, and maintainability while providing clear documentation and testing examples.",
+      title: "SaaS Project with AI Integration",
+      description: "A comprehensive knowledge management system (KMS) built with microservices architecture, featuring AI integration for intelligent content processing, automated workflows, and enhanced user experience through machine learning capabilities.",
+      longDescription: "This enterprise SaaS platform demonstrates modern cloud-native architecture with AI integration. Built using microservices with gRPC communication, it provides intelligent knowledge management capabilities with automated CI/CD pipelines and comprehensive project management through Jira integration.",
       techStack: [
-        "Django REST Framework", "PostgreSQL", "JWT Authentication",
-        "Swagger/OpenAPI", "pytest", "Redis", "Celery", "Docker"
+        "Django", "gRPC", "RabbitMQ", "PostgreSQL", "Docker", 
+        "AI Integration", "CI/CD", "Jira", "Microservices", "REST APIs"
       ],
       features: [
-        "JWT-based authentication system",
-        "Comprehensive API documentation with Swagger",
-        "Rate limiting and throttling",
-        "Automated testing with pytest",
-        "Background task processing with Celery",
-        "API versioning and backward compatibility",
-        "Comprehensive error handling and logging"
+        "AI-powered content analysis and categorization",
+        "Microservices architecture with gRPC communication",
+        "Automated CI/CD pipelines for seamless deployment",
+        "Intelligent knowledge discovery and search",
+        "Real-time collaboration features",
+        "Project management integration with Jira",
+        "Scalable containerized infrastructure",
+        "Advanced analytics and reporting"
       ],
-      liveUrl: "https://ignitenepal.com/",
-      githubUrl: "https://ignitenepal.com/",
-      category: "Framework",
-      status: "Completed"
+      liveUrl: "https://withzetalabs.com/en/zeta-kms/features",
+      githubUrl: "https://withzetalabs.com/en/zeta-kms/features",
+      category: "SaaS Platform",
+      status: "Production"
     },
     {
       title: "Real-time Chat Application",
