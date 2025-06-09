@@ -12,23 +12,20 @@ const Experience = () => {
       location: "Kuleshwor, Kathmandu",
       period: "June 2025 – Present",
       type: "Full-time",
-      description: "Working on microservices architecture and scalable backend solutions.",
+      description: "Working on SaaS project with AI integration in microservices architecture using modern DevOps practices.",
       responsibilities: [
         "Developing microservices using Django and gRPC for distributed system architecture",
+        "Building SaaS platform with AI integration for enhanced user experience",
         "Handling asynchronous tasks with RabbitMQ for improved system performance",
+        "Implementing CI/CD pipelines for automated deployment and testing",
+        "Managing project workflows and sprint planning using Jira",
         "Designing optimized PostgreSQL databases for efficient data management",
         "Collaborating in cross-functional teams to deliver enterprise systems",
         "Implementing secure authentication and Role-Based Access Control (RBAC)",
-        "Building containerized applications using Docker for seamless deployment",
-        "Developing and maintaining RESTful APIs for various client applications"
+        "Building containerized applications using Docker for seamless deployment"
       ],
       technologies: [
-        "Django", "gRPC", "RabbitMQ", "PostgreSQL", "Docker", "Git", "REST APIs"
-      ],
-      achievements: [
-        "Successfully implemented microservices architecture for scalable solutions",
-        "Optimized database performance through efficient schema design",
-        "Enhanced system security with robust authentication mechanisms"
+        "Django", "gRPC", "RabbitMQ", "PostgreSQL", "Docker", "Git", "REST APIs", "AI Integration", "CI/CD", "Jira"
       ]
     },
     {
@@ -49,11 +46,6 @@ const Experience = () => {
       ],
       technologies: [
         "Django", "Django REST Framework", "RabbitMQ", "Redis", "gRPC", "PostgreSQL", "Git", "ClickUp"
-      ],
-      achievements: [
-        "Successfully delivered the complete Attendance Management System",
-        "Improved system performance by 40% through microservices implementation",
-        "Reduced API response time through efficient database optimization"
       ]
     },
     {
@@ -73,11 +65,6 @@ const Experience = () => {
       ],
       technologies: [
         "Django", "Django REST Framework", "PostgreSQL", "Git", "REST APIs", "ClickUp"
-      ],
-      achievements: [
-        "Successfully completed all assigned learning milestones ahead of schedule",
-        "Contributed meaningfully to production codebase as an intern",
-        "Received positive feedback for quick learning and professional adaptation"
       ]
     }
   ];
@@ -163,7 +150,7 @@ const Experience = () => {
                 </div>
 
                 {/* Technologies */}
-                <div className="mb-6">
+                <div>
                   <h4 className="font-semibold mb-3">Technologies Used</h4>
                   <div className="flex flex-wrap gap-2">
                     {exp.technologies.map((tech) => (
@@ -172,21 +159,6 @@ const Experience = () => {
                       </Badge>
                     ))}
                   </div>
-                </div>
-
-                {/* Achievements */}
-                <div>
-                  <h4 className="font-semibold mb-3">Key Achievements</h4>
-                  <ul className="space-y-2">
-                    {exp.achievements.map((achievement, idx) => (
-                      <li key={idx} className="flex items-start space-x-3">
-                        <div className="w-2 h-2 bg-green-500 rounded-full mt-2 flex-shrink-0"></div>
-                        <span className="text-muted-foreground text-sm leading-relaxed">
-                          {achievement}
-                        </span>
-                      </li>
-                    ))}
-                  </ul>
                 </div>
               </Card>
             </div>
