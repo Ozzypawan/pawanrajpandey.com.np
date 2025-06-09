@@ -1,4 +1,3 @@
-
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -27,28 +26,6 @@ const Projects = () => {
       githubUrl: "https://github.com/Ozzypawan/AMS",
       category: "Enterprise Software",
       status: "Production"
-    },
-    {
-      title: "Microservices Communication Platform",
-      description: "A scalable microservices architecture implementation using gRPC for inter-service communication, featuring real-time messaging capabilities with Django Channels and Redis-based caching for optimal performance.",
-      longDescription: "This project demonstrates modern microservices architecture patterns, implementing efficient inter-service communication through gRPC protocol. The system features real-time capabilities and demonstrates how to effectively break down monolithic applications into manageable, scalable services.",
-      techStack: [
-        "Django", "gRPC", "Django Channels", "Redis", "PostgreSQL", 
-        "Docker", "Microservices", "WebSocket", "Message Queues"
-      ],
-      features: [
-        "gRPC-based inter-service communication",
-        "Real-time messaging with Django Channels",
-        "Redis-based caching and session management",
-        "Scalable microservices architecture",
-        "WebSocket support for live features",
-        "Containerized deployment with Docker",
-        "Service discovery and load balancing"
-      ],
-      liveUrl: "",
-      githubUrl: "https://github.com/ozzypawan/microservices-platform",
-      category: "Architecture",
-      status: "In Development"
     },
     {
       title: "SaaS Project with AI Integration",
