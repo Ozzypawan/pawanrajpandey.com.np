@@ -1,56 +1,156 @@
-
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ArrowDown } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
 
-const Home = () => {
+const Index = () => {
+  useEffect(() => {
+    // SEO optimization - set document title and meta description
+    document.title = "Pawan Raj Pandey - Django Backend Developer | Python & REST API Expert";
+    
+    // Update meta description
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 'Pawan Raj Pandey - Experienced Django Backend Developer with 1+ years in building scalable systems, REST APIs, microservices, and real-time features. Expert in Python, PostgreSQL, RabbitMQ, and gRPC.');
+    } else {
+      const meta = document.createElement('meta');
+      meta.name = 'description';
+      meta.content = 'Pawan Raj Pandey - Experienced Django Backend Developer with 1+ years in building scalable systems, REST APIs, microservices, and real-time features. Expert in Python, PostgreSQL, RabbitMQ, and gRPC.';
+      document.head.appendChild(meta);
+    }
+
+    // Update meta keywords
+    const metaKeywords = document.querySelector('meta[name="keywords"]');
+    if (metaKeywords) {
+      metaKeywords.setAttribute('content', 'Django Developer, Python Backend Developer, REST API, Microservices, PostgreSQL, RabbitMQ, gRPC, Django REST Framework, Backend Engineer, Pawan Raj Pandey');
+    } else {
+      const meta = document.createElement('meta');
+      meta.name = 'keywords';
+      meta.content = 'Django Developer, Python Backend Developer, REST API, Microservices, PostgreSQL, RabbitMQ, gRPC, Django REST Framework, Backend Engineer, Pawan Raj Pandey';
+      document.head.appendChild(meta);
+    }
+
+    // Open Graph meta tags for social sharing
+    const ogTitle = document.querySelector('meta[property="og:title"]');
+    if (ogTitle) {
+      ogTitle.setAttribute('content', 'Pawan Raj Pandey - Django Backend Developer');
+    } else {
+      const meta = document.createElement('meta');
+      meta.setAttribute('property', 'og:title');
+      meta.content = 'Pawan Raj Pandey - Django Backend Developer';
+      document.head.appendChild(meta);
+    }
+
+    const ogDescription = document.querySelector('meta[property="og:description"]');
+    if (ogDescription) {
+      ogDescription.setAttribute('content', 'Experienced Django Backend Developer specializing in scalable systems, REST APIs, and microservices architecture.');
+    } else {
+      const meta = document.createElement('meta');
+      meta.setAttribute('property', 'og:description');
+      meta.content = 'Experienced Django Backend Developer specializing in scalable systems, REST APIs, and microservices architecture.';
+      document.head.appendChild(meta);
+    }
+
+    const ogImage = document.querySelector('meta[property="og:image"]');
+    if (ogImage) {
+      ogImage.setAttribute('content', '/pawanrajpandey.jpeg');
+    } else {
+      const meta = document.createElement('meta');
+      meta.setAttribute('property', 'og:image');
+      meta.content = '/pawanrajpandey.jpeg';
+      document.head.appendChild(meta);
+    }
+
+    // Twitter Card meta tags
+    const twitterCard = document.querySelector('meta[name="twitter:card"]');
+    if (!twitterCard) {
+      const meta = document.createElement('meta');
+      meta.name = 'twitter:card';
+      meta.content = 'summary_large_image';
+      document.head.appendChild(meta);
+    }
+
+    const twitterTitle = document.querySelector('meta[name="twitter:title"]');
+    if (!twitterTitle) {
+      const meta = document.createElement('meta');
+      meta.name = 'twitter:title';
+      meta.content = 'Pawan Raj Pandey - Django Backend Developer';
+      document.head.appendChild(meta);
+    }
+
+    const twitterDescription = document.querySelector('meta[name="twitter:description"]');
+    if (!twitterDescription) {
+      const meta = document.createElement('meta');
+      meta.name = 'twitter:description';
+      meta.content = 'Experienced Django Backend Developer specializing in scalable systems, REST APIs, and microservices architecture.';
+      document.head.appendChild(meta);
+    }
+
+    const twitterImage = document.querySelector('meta[name="twitter:image"]');
+    if (!twitterImage) {
+      const meta = document.createElement('meta');
+      meta.name = 'twitter:image';
+      meta.content = '/pawanrajpandey.jpeg';
+      document.head.appendChild(meta);
+    }
+
+    // Structured data for better SEO
+    const structuredData = {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Pawan Raj Pandey",
+      "jobTitle": "Django Backend Developer",
+      "description": "Experienced Django Backend Developer with 1+ years in building scalable systems, REST APIs, and microservices architecture.",
+      "url": window.location.origin,
+      "image": "/pawanrajpandey.jpeg",
+      "email": "pawanpandey1251@gmail.com",
+      "telephone": "+977-9767279454",
+      "sameAs": [
+        "https://www.linkedin.com/in/pawanrajpandey/",
+        "https://github.com/ozzypawan"
+      ],
+      "knowsAbout": [
+        "Django",
+        "Python",
+        "PostgreSQL",
+        "REST APIs",
+        "RabbitMQ",
+        "gRPC",
+        "Redis",
+        "Microservices"
+      ]
+    };
+
+    const existingScript = document.querySelector('script[type="application/ld+json"]');
+    if (existingScript) {
+      existingScript.textContent = JSON.stringify(structuredData);
+    } else {
+      const script = document.createElement('script');
+      script.type = 'application/ld+json';
+      script.textContent = JSON.stringify(structuredData);
+      document.head.appendChild(script);
+    }
+
+    // Cleanup function
+    return () => {
+      // Clean up when component unmounts
+      const scriptToRemove = document.querySelector('script[type="application/ld+json"]');
+      if (scriptToRemove) {
+        document.head.removeChild(scriptToRemove);
+      }
+    };
+  }, []);
+
   const scrollToProjects = () => {
     const projectsSection = document.getElementById("projects-preview");
     projectsSection?.scrollIntoView({ behavior: "smooth" });
   };
 
-  const downloadCV = () => {
-    // Create a blob with CV content
-    const cvContent = `
-PAWAN RAJ PANDEY
-Django Backend Developer
-
-Contact:
-📞 +977-9767279454
-📧 pawanpandey1251@gmail.com
-🔗 LinkedIn: https://www.linkedin.com/in/pawanrajpandey/
-💻 GitHub: https://github.com/ozzypawan
-
-SUMMARY
-Backend developer with 1 year of industry experience contributing to scalable backend systems and real-time features. Familiar with microservices architecture and message queue systems like RabbitMQ & gRPC. Proficient in Django, REST APIs, and PostgreSQL.
-
-EXPERIENCE
-Junior Backend Developer - Ayata Incorporation (July 2024 – April 2025)
-• Developed core backend features for Attendance Management System
-• Built RESTful APIs using Django and DRF
-• Integrated RabbitMQ for asynchronous tasks
-• Implemented microservices using gRPC
-
-Intern Backend Developer - Ayata Incorporation (April 2024 – July 2024)
-• Learned Django & DRF basics
-• Designed PostgreSQL databases
-• Gained Agile development experience
-
-EDUCATION
-BSc.CSIT - St. Lawrence College (2020 – 2024)
-    `;
-    
-    const blob = new Blob([cvContent], { type: "text/plain" });
-    const url = window.URL.createObjectURL(blob);
-    const link = document.createElement("a");
-    link.href = url;
-    link.download = "Pawan_Raj_Pandey_CV.txt";
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-    window.URL.revokeObjectURL(url);
+  const previewCV = () => {
+    // Open PDF in new tab for preview
+    window.open("/pawanrajpandey-resume.pdf", "_blank", "noopener,noreferrer");
   };
 
   const techStack = [
@@ -64,13 +164,16 @@ BSc.CSIT - St. Lawrence College (2020 – 2024)
       <section className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center space-y-8 animate-fade-in">
           {/* Profile Picture */}
-          <div className="relative mx-auto w-32 h-32 sm:w-40 sm:h-40 mb-8">
-            <div className="w-full h-full rounded-full bg-gradient-to-r from-blue-500 to-purple-600 p-1">
-              <div className="w-full h-full rounded-full bg-muted flex items-center justify-center overflow-hidden">
+          <div className="relative mx-auto w-48 h-64 sm:w-56 sm:h-72 mb-8">
+            <div className="w-full h-full rounded-2xl bg-gradient-to-r from-blue-500 to-purple-600 p-1 shadow-2xl">
+              <div className="w-full h-full rounded-xl bg-background overflow-hidden">
                 <img 
-                  src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=160&h=160&fit=crop&crop=face"
-                  alt="Pawan Raj Pandey"
-                  className="w-full h-full object-cover rounded-full"
+                  src="/pawanrajpandey.jpeg"
+                  alt="Pawan Raj Pandey - Django Backend Developer"
+                  className="w-full h-full object-cover object-top"
+                  loading="eager"
+                  width="224"
+                  height="288"
                 />
               </div>
             </div>
@@ -106,16 +209,18 @@ BSc.CSIT - St. Lawrence College (2020 – 2024)
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8">
             <Button 
               size="lg" 
-              onClick={downloadCV}
+              onClick={previewCV}
               className="min-w-[160px]"
+              aria-label="Preview Pawan Raj Pandey's resume"
             >
-              Download CV
+              View Resume
             </Button>
             <Button 
               variant="outline" 
               size="lg" 
               onClick={scrollToProjects}
               className="min-w-[160px]"
+              aria-label="View Pawan's projects"
             >
               View Projects
               <ArrowDown className="ml-2 h-4 w-4" />
@@ -150,12 +255,12 @@ BSc.CSIT - St. Lawrence College (2020 – 2024)
                 </div>
                 <div className="flex gap-4 pt-2">
                   <Button variant="outline" size="sm" asChild>
-                    <a href="https://ams.ayata.com.np/" target="_blank" rel="noopener noreferrer">
+                    <a href="https://ams.ayata.com.np/" target="_blank" rel="noopener noreferrer" aria-label="View Attendance Management System live demo">
                       Live Demo
                     </a>
                   </Button>
                   <Button variant="outline" size="sm" asChild>
-                    <a href="https://github.com/Ozzypawan/AMS" target="_blank" rel="noopener noreferrer">
+                    <a href="https://github.com/Ozzypawan/AMS" target="_blank" rel="noopener noreferrer" aria-label="View Attendance Management System source code on GitHub">
                       GitHub
                     </a>
                   </Button>
@@ -178,7 +283,7 @@ BSc.CSIT - St. Lawrence College (2020 – 2024)
                 </div>
                 <div className="pt-2">
                   <Link to="/projects">
-                    <Button variant="outline" size="sm">
+                    <Button variant="outline" size="sm" aria-label="View all projects by Pawan Raj Pandey">
                       View All Projects
                     </Button>
                   </Link>
@@ -192,4 +297,4 @@ BSc.CSIT - St. Lawrence College (2020 – 2024)
   );
 };
 
-export default Home;
+export default Index;
